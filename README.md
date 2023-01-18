@@ -1,2 +1,7 @@
-# coding-test 대비 백준 알고리즘
-# 백준 문제 JAVA
+### BaekJoon Online Judge
+
+> BaekJoon Solutions in Java
+
+#### Usage
+
+* The basic template: [(code)](./Main.java)
