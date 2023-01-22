@@ -1,28 +1,55 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class Main {
-   public static void main(String[] args) {
-      Scanner sc = new Scanner(System.in);
-      String s=sc.nextLine();  // 주어질 문자열
-      String ch=s.toUpperCase();  // 문자열을 모두 대문자로 바꿈
-      int[] len=new int[26];   // 알파벳 갯수만큼 배열 생성
-
-      int max=0;   // 중복된 값을 저장할 수
-      int count=0;  // 가장 중복이 많은 문자가 몇개인지
-      char cha='A';  // 중복이 많은 문자를 알파벳으로 출력하기 위해 선언
-
-      for(int i=0;i<ch.length();i++) {
-    	  for(int j=0;j<len.length;j++) if(ch.charAt(i)-65==j) len[j]++;  // 만약 문자가 중복이 된다면, 해당 문자의 알파벳 
-                                                                          // 배열에 1씩 더한다
-      }
-	  for(int j=0;j<len.length;j++) max=Math.max(len[j],max);   //가장 중복이 많이 되어있는 문자열의 갯수를 가져온다.
-	  for(int j=0;j<len.length;j++) if(max==len[j]) count++;    // max값과 중복값이 일치하는 문자가 있다면 count에 1을 +
-	  for(int j=0;j<len.length;j++) {
-		  if(max==len[j]&&count==1) System.out.println((char)(cha+j)); //max값과 같은 문자들이 1개만 있다면 해당 문자 출력
-		  else if(max==len[j]&&1<count) {
-			  System.out.println("?");        // 만약 max값과 같은 문자들이 여러개라면 ?를 출력
-			  break;
-		  }
-	  }
-   }
+    public static void main(String[] args) throws IOException {
+        FastReader fr = new FastReader();
+        String s = fr.next();
+        int[] counter = new int[26];
+        for (int i = 0; i < s.length(); i++) {
+            char x = Character.toLowerCase(s.charAt(i));
+            int index = x - 'a'; // 인덱스 계산
+            counter[index]++; // 해당 알파벳의 개수 카운트
+        }
+        // 가장 개수(count)가 많은 알파벳 찾기
+        int maxCount = 0;
+        int maxIndex = -1;
+        for (int i = 0; i < 26; i++) {
+            if (counter[i] > maxCount) {
+                maxCount = counter[i];
+                maxIndex = i;
+            }
+        }
+        // 가장 개수(count)가 많은 찾기 2개 이상인지 확인
+        boolean duplicated = false;
+        for (int i = 0; i < 26; i++) {
+            if (counter[i] == maxCount && i != maxIndex) {
+                duplicated = true;
+            }
+        }
+        if (duplicated) System.out.println("?");
+        else System.out.println(Character.toUpperCase((char) (maxIndex + 'a')));
+    }
+    public static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
+        public FastReader() { br = new BufferedReader(new InputStreamReader(System.in)); }
+        public FastReader(String s) throws FileNotFoundException { br = new BufferedReader(new FileReader(new File(s))); }
+        String next() {
+            while (st == null || !st.hasMoreElements()) {
+                try { st = new StringTokenizer(br.readLine()); }
+                catch (IOException e) { e.printStackTrace(); }
+            }
+            return st.nextToken();
+        }
+        int nextInt() { return Integer.parseInt(next()); }
+        long nextLong() { return Long.parseLong(next()); }
+        double nextDouble() { return Double.parseDouble(next()); }
+        String nextLine() {
+            String str = "";
+            try { str = br.readLine(); }
+            catch (IOException e) { e.printStackTrace(); }
+            return str;
+        }
+    }
 }
