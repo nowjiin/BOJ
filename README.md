@@ -1,6 +1,6 @@
 ### BaekJoon Online Judge
 
-> BaekJoon Solutions in Java
+> BaekJoon Online Judge Solutions in Java
 
 #### 템플릿
 
