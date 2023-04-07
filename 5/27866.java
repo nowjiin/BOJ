@@ -10,5 +10,6 @@ public class Main {
 
         System.out.println(a.charAt(b-1));
         scanner.close();
+        
     }
 }
