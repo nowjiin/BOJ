@@ -13,13 +13,8 @@ public class Main {
         
         System.out.println("Case #" + i + ": " + (a+b));      
       }
-      
-      
     }
-
-
-
-  
+    
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
