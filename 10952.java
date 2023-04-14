@@ -13,9 +13,6 @@ public class Main {
         }
         System.out.println(a+b);
       }
-     
-      
-      
     }
   
     public static class FastReader {
