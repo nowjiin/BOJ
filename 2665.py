@@ -45,3 +45,4 @@ while queue: # 큐가 빌 때까지
                 heapq.heappush(queue, (count, nx, ny))
 
 print(visited[n - 1][n - 1])
+
