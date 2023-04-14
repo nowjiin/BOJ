@@ -10,17 +10,9 @@ public class Main {
       for(int i = 1; i <= a; i ++){
         sum += i;
       }
-      
         System.out.println(sum);
-
-      
-      //String s = fr.nextLine();
-      
     }
 
-
-
-  
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
