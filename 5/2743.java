@@ -7,6 +7,7 @@ public class Main {
 
         String a = scanner.nextLine();
         System.out.println(a.length());
-				scanner.close();
+	    
+	scanner.close();
     }
 }
