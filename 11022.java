@@ -13,12 +13,7 @@ public class Main {
         
         System.out.println("Case #" + i + ": " + a + " + " + b + " = " + (a+b));      
       }
-      
-      
-    }
-
-
-
+   }
   
     public static class FastReader {
         BufferedReader br;
