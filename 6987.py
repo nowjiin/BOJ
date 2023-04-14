@@ -39,7 +39,6 @@ index_c = [-1, -5, 9, 10, 11]
 index_d = [-2, -6, -9, 12, 13]
 index_e = [-3, -7, -10, -12, 14]
 """
-
 import sys
 
 sys.setrecursionlimit(int(1e8))
@@ -118,6 +117,5 @@ for _ in range(4):
     result = []
     dfs(0, 0)
     if check: print(1, end=" ")
-
 
     else: print(0, end=" ")
