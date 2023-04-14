@@ -13,13 +13,8 @@ public class Main {
         }
         System.out.println("");
       }
-      
-      
     }
-
-
-
-  
+    
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
