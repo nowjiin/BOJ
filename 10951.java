@@ -13,12 +13,9 @@ public class Main {
         } catch(Exception e){
             break;
         }
-        
       }    
-     
     }
 
-  
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
