@@ -22,19 +22,17 @@ public class Main {
       result.pop();
     }
   }
-
-
-
+	
 	public static void main(String[] args) {
 		FastReader fr = new FastReader();
-    N = fr.nextInt();
+		N = fr.nextInt();
 		M = fr.nextInt();
 		dfs(0);
-  }
-    public static class FastReader {
-      BufferedReader br;
-      StringTokenizer st;
-      public FastReader() { br = new BufferedReader(new InputStreamReader(System.in)); }
+	}
+    	public static class FastReader {
+      	BufferedReader br;
+      	StringTokenizer st;
+     	public FastReader() { br = new BufferedReader(new InputStreamReader(System.in)); }
         public FastReader(String s) throws FileNotFoundException { br = new BufferedReader(new FileReader(new File(s))); }
         String next() {
             while (st == null || !st.hasMoreElements()) {
@@ -54,3 +52,4 @@ public class Main {
         }
     }
 }
+
