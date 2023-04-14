@@ -11,15 +11,8 @@ public class Main {
         int c = fr.nextInt();
         System.out.println(b+c);
       }
-
-      
-      //String s = fr.nextLine();
-      
     }
 
-
-
-  
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
