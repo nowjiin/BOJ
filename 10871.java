@@ -17,12 +17,8 @@ public class Main {
           System.out.print(arr[i] + " ");
         }
       }
-
-      
     }
-    
 
-  
     public static class FastReader {
         BufferedReader br;
         StringTokenizer st;
