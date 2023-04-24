@@ -1,6 +1,6 @@
 ### BaekJoon Online Judge
 
-> BaekJoon Online Judge Solutions
+> BaekJoon Online Judge Solutions (Python,Java)
 
 #### 템플릿
  * 기본 템플릿 [code](./Main.java) 입니다.
