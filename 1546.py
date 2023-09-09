@@ -1,0 +1,5 @@
+n = input()
+ary = list(map(int, input().split()))
+max_num = max(ary)
+sum = sum(ary)
+print(sum * 100 / max_num / int(n))
