@@ -1,6 +1,3 @@
-sum= 0
+n = map(int,input().split(" "))
 
-for i in map(int, input().split()):
-    sum += i**2
-
-print(sum % 10)
+print(sum(map(lambda x: x*x, n)) % 10)
