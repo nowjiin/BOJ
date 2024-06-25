@@ -1,7 +1,7 @@
-N = int(input())
+n = int(input())
 count = 0
 sum = 0
-for _ in range(N):
+for _ in range(n):
   num = str(input())
   sum = 0
   count = 0
