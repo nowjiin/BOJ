@@ -3,7 +3,7 @@ while(1):
     print(input())
   except:
     break
-"""-----------------------------"""
+"""------------------------"""
 import sys
 
 input_text = sys.stdin.read()
