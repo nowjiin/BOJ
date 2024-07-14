@@ -1,18 +1,19 @@
-import sys
+hakjum = {
+    'A+': 4.5, 'A0': 4.0, 'B+': 3.5, 'B0': 3.0,
+    'C+': 2.5, 'C0': 2.0, 'D+': 1.5, 'D0': 1.0, 'F': 0.0
+}
 
-input = sys.stdin.readline
-score_table = {'A+': 4.5, 'A0': 4.0, 'B+': 3.5, 'B0': 3.0, 'C+': 2.5, 'C0': 2.0, 'D+': 1.5, 'D0': 1.0, 'P': 0.0, 'F': 0.0}
-total_score = 0
-total_grade = 0
+total_points = 0
+total_credits = 0
 
 for _ in range(20):
-    title, grade, score = input().split()
-    grade = float(grade)
-    if score == 'P':
-        grade = 0
+    subject, credit, grade = input().split()
+    credit = float(credit)
+    
+    if grade == 'P':
+        continue
 
-    total_grade += grade
-    total_score += grade * score_table[score]
+    total_points += credit * hakjum[grade]
+    total_credits += credit
 
-result =  total_score / total_grade
-print(result)
+print(total_points / total_credits)
