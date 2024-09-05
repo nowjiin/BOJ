@@ -1,3 +1,6 @@
+import sys
+input = sys.stdin.read
+
 stack = []
 
 def command_func(command):
@@ -21,8 +24,10 @@ def command_func(command):
             print(stack[-1])
         else:
             print('-1')
-            
-N = int(input())
 
-for i in range(N):
-    command_func(input())
+# 입력을 한 번에 모두 읽기
+commands = input().splitlines()
+N = int(commands[0])
+
+for i in range(1, N + 1):
+    command_func(commands[i])
