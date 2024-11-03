@@ -8,3 +8,10 @@ for i in range(2, max(a,b)+1):
 
 print(gcd)
 print(gcd*a*b)
+#-----------------------------------
+# import math
+
+# A,B = map(int,input().split())
+
+# print(math.gcd(A,B))
+# print(math.lcm(A,B))
