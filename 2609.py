@@ -8,6 +8,7 @@ for i in range(2, max(a,b)+1):
 
 print(gcd)
 print(gcd*a*b)
+
 #-----------------------------------
 # import math
 
